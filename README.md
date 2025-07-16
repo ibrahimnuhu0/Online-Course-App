@@ -1,15 +1,67 @@
+# 🧠 Online Course Platform – Final Project
 
-**General Notes**
+This Django-based web application allows learners to enroll in courses, take exams, and view their results. It was extended as part of a final project to include assessment and grading functionality.
 
-An `onlinecourse` app has already been provided in this repo upon which you will be adding a new assesement feature.
+---
 
-- If you want to develop the final project on Theia hosted by [IBM Developer Skills Network](https://labs.cognitiveclass.ai/), you will need to create the same project structure on Theia workspace and save it everytime you close the browser
-- Or you could develop the final project locally by setting up your own Python runtime and IDE
-- Hints for the final project are left on source code files
-- You may choose any cloud platform for deployment (default is IBM Cloud Foundry)
-- Depends on your deployment, you may choose any SQL database Django supported such as SQLite3, PostgreSQL, and MySQL (default is SQLite3)
+## 🚀 Features Implemented
 
-**ER Diagram**
-For your reference, we have prepared the ER diagram design for the new assesement feature.
+- Admin interface for managing:
+  - Courses and Lessons
+  - Questions and Choices (multiple-selection)
+- Exam functionality:
+  - Learners can take exams after enrolling
+  - Exams allow selecting multiple answers per question
+  - Automatic grading based on correct answers
+  - Pass/fail feedback with detailed explanations
+- Retake option if failed
+- Responsive frontend using Bootstrap 4
 
-![Onlinecourse ER Diagram](https://github.com/ibm-developer-skills-network/final-cloud-app-with-database/blob/master/static/media/course_images/onlinecourse_app_er.png)
+---
+
+## 🧩 Technologies Used
+
+- Django (Python)
+- SQLite (default DB)
+- Bootstrap 4
+- HTML templates
+- Admin panel integration
+
+---
+
+## 📁 Key Files and Structure
+
+```bash
+onlinecourse/
+├── models.py                # Models: Course, Lesson, Question, Choice, Submission
+├── views.py                 # Logic: submit exam, evaluate results
+├── templates/
+│   ├── course_detail_bootstrap.html
+│   └── exam_result_bootstrap.html
+├── admin.py                 # Admin site configuration
+
+
+## ⚙️ Setup and Run Instructions
+
+Follow these steps to set up the project locally and start the development server:
+
+1. **Run database migrations:**
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+
+2. **Create a superuser to access the admin site:**
+python manage.py createsuperuser
+
+3. **Start the Django development server:**
+python manage.py runserver
+
+4. **Access the admin panel:**
+
+Open your browser and go to:  
+`http://127.0.0.1:8000/admin/`
+
+Log in using the superuser credentials you created earlier.
+
+
