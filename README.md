@@ -47,7 +47,7 @@ Follow these steps to set up the project locally and start the development serve
 
 1. **Run database migrations:**
 
-```bash
+
 python manage.py makemigrations
 python manage.py migrate
 
@@ -64,4 +64,4 @@ Open your browser and go to:
 
 Log in using the superuser credentials you created earlier.
 
-```
+
