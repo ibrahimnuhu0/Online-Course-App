@@ -64,4 +64,4 @@ Open your browser and go to:
 
 Log in using the superuser credentials you created earlier.
 
-
+```
